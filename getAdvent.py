@@ -23,8 +23,6 @@ def getData():
 
     return dates,userids
 
-if __name__ == '__main__':
-    dates,userids = getData()
+# if __name__ == '__main__':
+#    dates,userids = getData()
 
-    print dates
-    print userids
