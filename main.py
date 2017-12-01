@@ -10,9 +10,4 @@ if __name__ == '__main__':
 
     for date in userdata:
         if(cd.run(date)):
-            print date
-            print userdata[date]
-            tw.tweet("krkrkgr",adventURL)
-
-
-
+            tw.tweet(userdata[date],adventURL)
