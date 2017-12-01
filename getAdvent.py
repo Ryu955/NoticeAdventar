@@ -3,9 +3,8 @@ import urllib2
 import json
 from bs4 import BeautifulSoup
 
-def getData():
+def getData(url):
     # アクセスするURL
-    url = "https://adventar.org/calendars/2359"
     html = urllib2.urlopen(url)
 
     # htmlをBeautifulSoupで扱う
@@ -14,15 +13,8 @@ def getData():
     jsonDate = json.loads(adventDate)
     entries = jsonDate['entries']
 
-    dates = []
-    userids = []
+    userdata = {}
 
     for entry in entries:
-        dates.append(entry['date'])
-        userids.append(entry['user']['name'])
-
-    return dates,userids
-
-# if __name__ == '__main__':
-#    dates,userids = getData()
-
+        userdata[entry['date']] = entry['user']['name']
+    return userdata
