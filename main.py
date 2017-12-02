@@ -1,7 +1,7 @@
 # coding: UTF-8
 
 import getAdvent as ga
-import tweet as tw
+import noticeTweet as tw
 import comparisonDate as cd
 
 if __name__ == '__main__':

@@ -18,3 +18,4 @@ def getData(url):
     for entry in entries:
         userdata[entry['date']] = entry['user']['name']
     return userdata
+
